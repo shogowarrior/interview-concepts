@@ -297,6 +297,6 @@ WHERE status = 'active';
 
 - [System Architecture](system-architecture.md) - Overall system design patterns
 - [Data Modeling Patterns](../data-modeling/) - Schema design for performance
-- [SQL Optimization](../sql/) - Query-level optimizations
+- [SQL Optimization](../sql/README.md) - Query-level optimizations
 
 Navigate back to [System Design & Advanced Concepts](README.md)

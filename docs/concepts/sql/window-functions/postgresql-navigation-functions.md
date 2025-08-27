@@ -437,4 +437,3 @@ SELECT id, value, LAST_VALUE(value) OVER (
 
 - [`concepts/sql/window-functions/window-functions-overview.md`](window-functions-overview.md) - Complete window functions guide
 - [`concepts/sql/window-functions/postgresql-ranking-functions.md`](postgresql-ranking-functions.md) - Ranking functions
-- [`companies/interviews/netflix/sql-problems/02-ranking-window-functions/`](../../../../interviews/netflix/sql-problems/02-ranking-window-functions/) - Real interview problems

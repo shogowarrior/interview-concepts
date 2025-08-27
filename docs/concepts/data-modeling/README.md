@@ -4,7 +4,9 @@ This comprehensive guide covers data modeling patterns and best practices for st
 
 ## 📚 Table of Contents
 
-### [01-core-entities](./01-core-entities/)
+* **[Data Modeling Overview](data-modelling.md)** - Introduction and overview
+
+### [01-core-entities](01-core-entities/README.md)
 
 Fundamental entity design patterns for streaming platforms.
 
@@ -12,7 +14,7 @@ Fundamental entity design patterns for streaming platforms.
 * **[Accounts & Profiles](01-core-entities/accounts-profiles.md)** - User accounts, profiles, and device relationships
 * **[Subscriptions & Billing](01-core-entities/subscriptions-billing.md)** - Subscription plans, billing cycles, and payment processing
 
-### [02-relationships-patterns](./02-relationships-patterns/)
+### [02-relationships-patterns](02-relationships-patterns/README.md)
 
 Common relationship patterns and data modeling techniques.
 
@@ -20,7 +22,7 @@ Common relationship patterns and data modeling techniques.
 * **[User Viewing History](02-relationships-patterns/user-viewing-history.md)** - Playback sessions, granular events, and resume functionality
 * **[Recommendations Storage](02-relationships-patterns/recommendations-storage.md)** - Similarity graphs, personalized recommendations, and feature stores
 
-### [03-event-streaming](./03-event-streaming/)
+### [03-event-streaming](03-event-streaming/README.md)
 
 Event-driven data models for real-time analytics and experimentation.
 
@@ -28,7 +30,7 @@ Event-driven data models for real-time analytics and experimentation.
 * **[Engagement Metrics](03-event-streaming/engagement-metrics.md)** - Daily Active Users (DAU), event tracking, and user engagement analysis
 * **[Streaming Quality Metrics](03-event-streaming/streaming-quality-metrics.md)** - Playback quality monitoring, buffering analysis, and CDN performance
 
-### [04-scalability-patterns](./04-scalability-patterns/)
+### [04-scalability-patterns](04-scalability-patterns/README.md)
 
 Advanced patterns for handling massive scale and global distribution.
 
@@ -140,9 +142,9 @@ Advanced patterns for handling massive scale and global distribution.
 ## 🔗 Navigation
 
 * [⬅️ Back to Concepts Overview](../README.md)
-* [📊 SQL Concepts](../sql/)
-* [🏗️ System Design](../system-design/)
-* [🏢 Company Interview Prep](../../companies/)
+* [📊 SQL Concepts](../sql/README.md)
+* [🏗️ System Design](../system-design/README.md)
+* [🏢 Company Interview Prep](../../interviews/README.md)
 
 ---
 

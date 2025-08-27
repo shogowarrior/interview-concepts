@@ -116,9 +116,9 @@ For a deeper understanding of SQL concepts, explore these related guides:
 
 ### Company-Specific Problems
 
-- [`../../../../interviews/netflix/sql-problems/`](../../../../interviews/netflix/sql-problems/) - Netflix SQL interview problems
-- [`../../../../interviews/netflix/sql-problems/advanced-patterns.md`](../../../../interviews/netflix/sql-problems/advanced-patterns.md) - Netflix advanced patterns
-- [`../../../../interviews/netflix/sql-problems/optimization-challenges.md`](../../../../interviews/netflix/sql-problems/optimization-challenges.md) - Netflix optimization challenges
+- [`../../../interviews/netflix/`](../../../interviews/netflix/) - Netflix SQL interview problems
+- [`../../../interviews/netflix/README.md`](../../../interviews/netflix/README.md) - Netflix advanced patterns
+- [`../../../interviews/netflix/README.md`](../../../interviews/netflix/README.md) - Netflix optimization challenges
 
 ## Getting Started
 

@@ -590,4 +590,3 @@ FROM user_events;
 - [`concepts/sql/window-functions/window-functions-overview.md`](window-functions-overview.md) - Complete window functions guide
 - [`concepts/sql/window-functions/postgresql-ranking-functions.md`](postgresql-ranking-functions.md) - Ranking functions
 - [`concepts/sql/window-functions/postgresql-navigation-functions.md`](postgresql-navigation-functions.md) - Navigation functions
-- [`companies/interviews/netflix/sql-problems/02-ranking-window-functions/`](../../../../interviews/netflix/sql-problems/02-ranking-window-functions/) - Real interview problems

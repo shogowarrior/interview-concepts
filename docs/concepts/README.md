@@ -16,12 +16,12 @@ The concepts directory serves as your central hub for mastering foundational tec
 
 Master database querying and analytics with comprehensive coverage from basic aggregation to advanced optimization techniques.
 
-#### [📊 SQL Learning Hub](sql/)
+#### [📊 SQL Learning Hub](sql/README.md)
 
-- **[Complete SQL Learning Path](sql/)** - Structured progression from fundamentals to expert-level patterns
-- **[Practical Exercises](sql/extras/)** - Hands-on practice with Wikibooks and TopTal challenges
-- **[Interview Problems](sql/problems/)** - Netflix-specific SQL challenges with detailed solutions
-- **[Advanced Techniques](sql/window-functions/)** - Window functions, CTEs, and complex analytics
+- **[Complete SQL Learning Path](sql/README.md)** - Structured progression from fundamentals to expert-level patterns
+- **[Practical Exercises](sql/extras/README.md)** - Hands-on practice with Wikibooks and TopTal challenges
+- **[Interview Problems](sql/problems/README.md)** - Netflix-specific SQL challenges with detailed solutions
+- **[Advanced Techniques](sql/window-functions/README.md)** - Window functions, CTEs, and complex analytics
 
 **Key Topics**: Aggregation, JOINs, window functions, CTEs, optimization, real-world analytics
 
@@ -31,12 +31,12 @@ Master database querying and analytics with comprehensive coverage from basic ag
 
 Learn database design principles and architectural patterns for building scalable data systems.
 
-#### [📋 Data Modeling Hub](data-modeling/)
+#### [📋 Data Modeling Hub](data-modeling/README.md)
 
-- **[Core Entities](data-modeling/01-core-entities/)** - User accounts, content catalogs, subscriptions, and billing systems
-- **[Relationship Patterns](data-modeling/02-relationships-patterns/)** - Many-to-many relationships, user behavior tracking, and recommendations
-- **[Scalability Patterns](data-modeling/04-scalability-patterns/)** - Partitioning, sharding, and large-scale data architectures
-- **[Event Streaming](data-modeling/03-event-streaming/)** - Real-time data processing and quality metrics
+- **[Core Entities](data-modeling/01-core-entities/README.md)** - User accounts, content catalogs, subscriptions, and billing systems
+- **[Relationship Patterns](data-modeling/02-relationships-patterns/README.md)** - Many-to-many relationships, user behavior tracking, and recommendations
+- **[Scalability Patterns](data-modeling/04-scalability-patterns/README.md)** - Partitioning, sharding, and large-scale data architectures
+- **[Event Streaming](data-modeling/03-event-streaming/README.md)** - Real-time data processing and quality metrics
 
 **Key Topics**: Entity design, relationship modeling, scalability patterns, event-driven architectures
 
@@ -46,7 +46,7 @@ Learn database design principles and architectural patterns for building scalabl
 
 Master the principles of designing large-scale, distributed systems and architectures.
 
-#### [🏗️ System Design Hub](system-design/)
+#### [🏗️ System Design Hub](system-design/README.md)
 
 - **[System Architecture](system-design/system-architecture.md)** - Fundamental design patterns and architectural principles
 - **[Performance Optimization](system-design/performance-optimization.md)** - Scaling strategies and performance tuning
@@ -102,14 +102,14 @@ Each concept area follows a structured learning progression:
 
 ## 📚 Additional Resources
 
-- [Company Interview Preparation](../interviews/) - Industry-specific case studies and problems
-- [Netflix Data Modeling](../concepts/data-modeling/) - Real-world applications
+- [Company Interview Preparation](../interviews/README.md) - Industry-specific case studies and problems
+- [Netflix Data Modeling](../concepts/data-modeling/README.md) - Real-world applications
 - [SQL Performance Optimization](sql/optimization/sql-optimization-challenges.md) - Query tuning strategies
 
 ## 🔗 Navigation
 
 - [⬅️ Back to Main Repository](../README.md)
-- [📊 SQL Concepts Hub](sql/)
-- [📋 Data Modeling Hub](data-modeling/)
-- [🏢 System Design Hub](system-design/)
-- [🏢 Company Interview Prep](../interviews/)
+- [📊 SQL Concepts Hub](sql/README.md)
+- [📋 Data Modeling Hub](data-modeling/README.md)
+- [🏢 System Design Hub](system-design/README.md)
+- [🏢 Company Interview Prep](../interviews/README.md)

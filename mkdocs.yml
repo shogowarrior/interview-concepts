@@ -34,7 +34,6 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.instant
-    - navigation.expand
     - navigation.tracking
     - tabs.sticky
     - toc.sticky

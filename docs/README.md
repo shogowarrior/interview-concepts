@@ -6,17 +6,17 @@ This repository serves as a comprehensive resource for interview preparation, fo
 
 ## Key Areas
 
-### [Concepts](./docs/concepts/)
+### [Concepts](concepts/README.md)
 
 The concepts directory offers structured guidance across three main technical domains:
 
-- [**SQL**](concepts/sql/): Database querying, analytics, and performance optimization
-- [**Data Modeling**](concepts/data-modeling/): Database design patterns and architectural principles
-- [**System Design**](concepts/system-design/): Scalable system architecture and design patterns
+- [**SQL**](concepts/sql/README.md): Database querying, analytics, and performance optimization
+- [**Data Modeling**](concepts/data-modeling/README.md): Database design patterns and architectural principles
+- [**System Design**](concepts/system-design/README.md): Scalable system architecture and design patterns
 
 Each area includes progressive learning paths from fundamentals to advanced techniques, with practical exercises and real-world case studies.
 
-### [Interviews](./docs/interviews/)
+### [Interviews](interviews/README.md)
 
 The interviews directory contains company-specific interview problems and case studies, featuring challenges from organizations such as Netflix, Anthropic, and others. These materials provide targeted preparation for industry-specific technical interviews.
 

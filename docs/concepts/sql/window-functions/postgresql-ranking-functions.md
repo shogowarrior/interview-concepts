@@ -246,5 +246,4 @@ FROM daily_sales;
 ## 📚 Related Topics
 
 - [`concepts/sql/window-functions/window-functions-overview.md`](window-functions-overview.md) - Complete window functions guide
-- [`concepts/sql/aggregation/aggregate-functions.md`](aggregate-functions.md) - Aggregation concepts
-- [`companies/interviews/netflix/sql-problems/02-ranking-window-functions/`](../../../../interviews/netflix/sql-problems/02-ranking-window-functions/) - Real interview problems
+- [`concepts/sql/aggregation/aggregate-functions.md`](../aggregation/aggregate-functions.md) - Aggregation concepts

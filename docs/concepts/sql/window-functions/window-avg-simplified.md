@@ -296,4 +296,3 @@ FROM customer_totals;
 - [`concepts/sql/window-functions/postgresql-navigation-functions.md`](postgresql-navigation-functions.md) - Navigation functions
 - [`concepts/sql/window-functions/postgresql-advanced-concepts.md`](postgresql-advanced-concepts.md) - Advanced concepts
 - [`concepts/sql/window-functions/postgresql-interview-examples.md`](postgresql-interview-examples.md) - Interview examples
-- [`companies/interviews/netflix/sql-problems/02-ranking-window-functions/`](../../../../interviews/netflix/sql-problems/02-ranking-window-functions/) - Real Netflix problems

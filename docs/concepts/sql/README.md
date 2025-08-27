@@ -15,17 +15,17 @@ This hub connects **general SQL concepts** with **company-specific interview pro
 
 ### 🟡 **Data Relationships & Joins**
 
-- **[JOINs and Relationships](joins/)** - Multi-table analysis and data relationships
+- **[JOINs and Relationships](joins/page-impressions-analysis.md)** - Multi-table analysis and data relationships
 - **[Page Impressions Analysis](joins/page-impressions-analysis.md)** - Business-focused JOIN patterns
 - **[Subqueries](subqueries/subqueries.md)** - Correlated and non-correlated subquery patterns
 
 ### 🟠 **Advanced SQL Techniques**
 
-- **[Common Table Expressions (CTEs)](cte/)** - Modular query building and complex analysis
+- **[Common Table Expressions (CTEs)](cte/cte-vs-window-comparison.md)** - Modular query building and complex analysis
   - [CTE vs Window Functions](cte/cte-vs-window-comparison.md) - Choosing the right approach
   - [Customer Sales Analysis](cte/customer-sales-analysis.md) - Multi-step analytical queries
   - [Vacant Days Analysis](cte/vacant-days-detailed.md) - Recursive CTEs for date ranges
-- **[Window Functions](window-functions/)** - Advanced analytics and ranking operations
+- **[Window Functions](window-functions/README.md)** - Advanced analytics and ranking operations
   - [Window Functions Overview](window-functions/window-functions-overview.md) - Complete guide
   - [PostgreSQL Interview Examples](window-functions/postgresql-interview-examples.md) - Interview-focused problems
   - [Ranking Functions](window-functions/postgresql-ranking-functions.md) - ROW_NUMBER, RANK, DENSE_RANK
@@ -60,7 +60,7 @@ This hub connects **general SQL concepts** with **company-specific interview pro
 
 ## 🏢 SQL Concepts in Netflix Interview Problems
 
-### 🟢 **Basic Analytics** ([Full Category](problems/01-basic-analytics/))
+### 🟢 **Basic Analytics** ([Full Category](problems/01-basic-analytics/README.md))
 
 Fundamental SQL analytics focusing on data aggregation and basic metrics.
 
@@ -74,7 +74,7 @@ Fundamental SQL analytics focusing on data aggregation and basic metrics.
 
 ---
 
-### 🟡 **Window Functions & Ranking** ([Full Category](problems/02-ranking-window-functions/))
+### 🟡 **Window Functions & Ranking** ([Full Category](problems/02-ranking-window-functions/README.md))
 
 Advanced problems using window functions and ranking operations.
 
@@ -141,7 +141,7 @@ graph TD
 **Focus**: Build SQL confidence with core operations and hands-on practice
 
 1. [Aggregate Functions](aggregation/aggregate-functions.md)
-2. [Basic Analytics Problems](problems/01-basic-analytics/)
+2. [Basic Analytics Problems](problems/01-basic-analytics/README.md)
 3. **[Wikibooks Beginner Exercises](extras/wikibooks.md#beginner-level-basic-analytics)** - Practice DAU, retention, and content analytics
 
 4. **Key Skills**: COUNT, SUM, AVG, GROUP BY, basic filtering, user metrics
@@ -150,7 +150,7 @@ graph TD
 
 **Focus**: Master data relationships, window functions, and complex patterns
 
-1. [JOINs and Relationships](joins/)
+1. [JOINs and Relationships](joins/page-impressions-analysis.md)
 2. [Subqueries](subqueries/subqueries.md)
 3. **[Wikibooks Window Functions Exercises](extras/wikibooks.md#intermediate-level-window-functions--ranking)** - Practice ranking and navigation functions
 4. **[TopTal Intermediate Questions](extras/toptal.md#intermediate-level)** - Real-world ranking and analytics problems
@@ -162,7 +162,7 @@ graph TD
 
 1. [CTEs Overview](cte/cte-vs-window-comparison.md)
 2. [Window Functions Overview](window-functions/window-functions-overview.md)
-3. [Ranking Problems](problems/02-ranking-window-functions/)
+3. [Ranking Problems](problems/02-ranking-window-functions/README.md)
 4. **[Wikibooks Advanced Patterns](extras/wikibooks.md#advanced-level-complex-patterns--optimization)** - CTEs, recursive queries, and percentile analysis
 
 5. **[TopTal Advanced Questions](extras/toptal.md#advanced-level)** - Heavy watchers retention, content hierarchy, statistical functions
@@ -243,9 +243,9 @@ This SQL hub provides multiple pathways for skill development, from foundational
 
 | Focus Area | Wikibooks Exercises | TopTal Challenges | Netflix Problems | Best For |
 |------------|-------------------|-------------------|------------------|----------|
-| **Basic Analytics** | [DAU, Retention, Content Analytics](extras/wikibooks.md#beginner-level-basic-analytics) | [User Metrics, Basic Aggregation](extras/toptal.md#beginner-level) | [Daily Active Users, Most Watched Show](problems/01-basic-analytics/) | Building confidence with core SQL |
+| **Basic Analytics** | [DAU, Retention, Content Analytics](extras/wikibooks.md#beginner-level-basic-analytics) | [User Metrics, Basic Aggregation](extras/toptal.md#beginner-level) | [Daily Active Users, Most Watched Show](problems/01-basic-analytics/README.md) | Building confidence with core SQL |
 
-| **Window Functions** | [Ranking, Navigation Functions](extras/wikibooks.md#intermediate-level-window-functions--ranking) | [Top-N, Consecutive Patterns](extras/toptal.md#intermediate-level) | [Top 3 Shows, Consecutive Days](problems/02-ranking-window-functions/) | Mastering advanced analytics |
+| **Window Functions** | [Ranking, Navigation Functions](extras/wikibooks.md#intermediate-level-window-functions--ranking) | [Top-N, Consecutive Patterns](extras/toptal.md#intermediate-level) | [Top 3 Shows, Consecutive Days](problems/02-ranking-window-functions/README.md) | Mastering advanced analytics |
 
 | **CTEs & Complex Patterns** | [Heavy Watchers, Content Hierarchy](extras/wikibooks.md#advanced-level-complex-patterns--optimization) | [Retention Analysis, Recursive CTEs](extras/toptal.md#advanced-level) | [Advanced Patterns](problems/advanced-patterns.md) | Complex problem solving |
 
@@ -288,9 +288,9 @@ This SQL hub provides multiple pathways for skill development, from foundational
 
 ### Related Learning Areas
 
-- **[Data Modeling](../../concepts/data-modeling/)** - Understanding database design patterns
-- **[Netflix Data Modeling](../../concepts/data-modeling/)** - Real-world applications
-- **[Performance Optimization](../../../../interviews/netflix/sql-problems/optimization-challenges.md)** - Query tuning strategies
+- **[Data Modeling](../data-modeling/README.md)** - Understanding database design patterns
+- **[Netflix Data Modeling](../data-modeling/README.md)** - Real-world applications
+- **[Performance Optimization](problems/optimization-challenges.md)** - Query tuning strategies
 
 ### Practice & Exercise Collections
 
@@ -308,8 +308,8 @@ This SQL hub provides multiple pathways for skill development, from foundational
 ## 🔗 Navigation & Next Steps
 
 - [⬅️ **Back to Main Concepts**](../README.md)
-- [📊 **Next: Data Modeling Concepts**](../data-modeling/)
-- [🏢 **Company Interview Prep**](../companies/)
+- [📊 **Next: Data Modeling Concepts**](../data-modeling/README.md)
+- [🏢 **Company Interview Prep**](../../interviews/README.md)
 - [🎯 **Start Learning: Aggregate Functions**](aggregation/aggregate-functions.md)
 - [📚 **Practice Exercises: Wikibooks Collection**](extras/wikibooks.md)
 - [🎯 **Interview Practice: TopTal Challenges**](extras/toptal.md)

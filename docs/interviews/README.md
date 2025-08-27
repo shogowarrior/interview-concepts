@@ -16,7 +16,7 @@ This directory contains a curated collection of company-specific interview probl
   - Ethical AI considerations
 - Includes relevant job postings
 
-## [netflix](./netflix)
+## [netflix](./netflix/README.md)
 
 - Comprehensive data engineering interview preparation:
   - SQL analytics

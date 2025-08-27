@@ -131,5 +131,5 @@ ORDER BY department_id, salary DESC;
 
 ### 📚 Related Topics
 
-- [`concepts/sql/aggregation/aggregate-functions.md`](aggregate-functions.md) - Basic aggregation concepts
-- [`concepts/sql/cte/cte-vs-window-comparison.md`](cte-vs-window-comparison.md) - When to use CTEs vs window functions
+- [`concepts/sql/aggregation/aggregate-functions.md`](../aggregation/aggregate-functions.md) - Basic aggregation concepts
+- [`concepts/sql/cte/cte-vs-window-comparison.md`](../cte/cte-vs-window-comparison.md) - When to use CTEs vs window functions

@@ -54,7 +54,7 @@ ORDER BY activity_date;
 
 ***Related Concepts***:
 
- [`aggregation-functions.md`](aggregation-functions.md)
+ [`aggregation-functions.md`](../aggregation/aggregate-functions.md)
 
 ---
 
@@ -89,7 +89,7 @@ GROUP BY s.signup_date;
 
 ***Related Concepts***:
 
- [`joins.md`](joins.md), [`aggregation-functions.md`](aggregation-functions.md)
+ [`joins.md`](../joins/), [`aggregation-functions.md`](../aggregation/aggregate-functions.md)
 
 ## Intermediate Level
 
@@ -135,7 +135,7 @@ WHERE rnk = 1;
 
 ***Related Concepts***:
 
- [`window-functions-overview.md`](window-functions-overview.md), [`ranking-functions.md`](ranking-functions.md)
+ [`window-functions-overview.md`](../window-functions/window-functions-overview.md), [`ranking-functions.md`](../window-functions/postgresql-ranking-functions.md)
 
 ---
 
@@ -173,7 +173,7 @@ WHERE rnk <= 3;
 
 ***Related Concepts***:
 
- [`window-functions-overview.md`](window-functions-overview.md), [`ranking-functions.md`](ranking-functions.md)
+ [`window-functions-overview.md`](../window-functions/window-functions-overview.md), [`ranking-functions.md`](../window-functions/postgresql-ranking-functions.md)
 
 ---
 
@@ -211,7 +211,7 @@ AND DATEDIFF(prev_day, prev2_day) = 1;
 
 ***Related Concepts***:
 
- [`navigation-functions.md`](navigation-functions.md), [`window-functions-overview.md`](window-functions-overview.md)
+ [`navigation-functions.md`](../window-functions/postgresql-navigation-functions.md), [`window-functions-overview.md`](../window-functions/window-functions-overview.md)
 
 ## Advanced Level
 
@@ -256,7 +256,7 @@ JOIN heavy_watchers h2
 
 ***Related Concepts***:
 
- [`cte-overview.md`](cte-overview.md)
+ [`cte-overview.md`](../cte/)
 
 ---
 
@@ -307,7 +307,7 @@ SELECT * FROM content_hierarchy ORDER BY path;
 
 ***Related Concepts***:
 
- [`cte-overview.md`](cte-overview.md)
+ [`cte-overview.md`](../cte/)
 
 ---
 
@@ -351,7 +351,7 @@ WHERE pct_rank <= 0.01;
 
 ***Related Concepts***:
 
- [`advanced-window-functions.md`](advanced-window-functions.md)
+ [`advanced-window-functions.md`](../window-functions/postgresql-advanced-concepts.md)
 
 ---
 
@@ -387,7 +387,7 @@ LEFT JOIN watch_events w
 
 ***Related Concepts***:
 
- [`joins.md`](joins.md), [`aggregation-functions.md`](aggregation-functions.md)
+ [`joins.md`](../joins/), [`aggregation-functions.md`](../aggregation/aggregate-functions.md)
 
 ## Optimization Challenges
 
@@ -431,7 +431,7 @@ GROUP BY DATE(event_ts);
 
 ***Related Concepts***:
 
- [`sql-optimization-challenges.md`](sql-optimization-challenges.md)
+ [`sql-optimization-challenges.md`](../optimization/sql-optimization-challenges.md)
 
 ---
 
@@ -473,7 +473,7 @@ WHERE event_ts >= '2025-01-01'
 
 ***Related Concepts***:
 
- [`partitioning-sharding.md`](partitioning-sharding.md)
+ [`partitioning-sharding.md`](../../data-modeling/04-scalability-patterns/partitioning-sharding.md)
 
 ---
 
@@ -517,18 +517,18 @@ GROUP BY DATE(event_ts), show_id;
 
 ***Related Concepts***:
 
- [`sql-optimization-challenges.md`](sql-optimization-challenges.md)
+ [`sql-optimization-challenges.md`](../optimization/sql-optimization-challenges.md)
 
 ## Cross-References
 
 ### Main SQL Concepts Covered
 
-- **Aggregation Functions**: [`aggregation-functions.md`](aggregation-functions.md)
-- **Window Functions**: [`window-functions-overview.md`](window-functions-overview.md)
-- **Common Table Expressions**: [`cte-overview.md`](cte-overview.md)
-- **Joins**: [`joins.md`](joins.md)
-- **Subqueries**: [`subqueries.md`](subqueries.md)
-- **Optimization**: [`sql-optimization-challenges.md`](sql-optimization-challenges.md)
+- **Aggregation Functions**: [`aggregation-functions.md`](../aggregation/aggregate-functions.md)
+- **Window Functions**: [`window-functions-overview.md`](../window-functions/window-functions-overview.md)
+- **Common Table Expressions**: [`cte-overview.md`](../cte/)
+- **Joins**: [`joins.md`](../joins/)
+- **Subqueries**: [`subqueries.md`](../subqueries/subqueries.md)
+- **Optimization**: [`sql-optimization-challenges.md`](../optimization/sql-optimization-challenges.md)
 
 ### Business Domains
 
