@@ -1,0 +1,4473 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../wikibooks/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>SQL Interview Questions Streaming & Media Analytics - Interview Concepts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sql-interview-questions-streaming-media-analytics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Interview Concepts" class="md-header__button md-logo" aria-label="Interview Concepts" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Interview Concepts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SQL Interview Questions Streaming &amp; Media Analytics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_2">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Interview Concepts
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../interviews/" class="md-tabs__link">
+          
+  
+  
+  Interviews
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Interview Concepts" class="md-nav__button md-logo" aria-label="Interview Concepts" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Interview Concepts
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interview Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concepts Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data modeling
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data modeling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Modeling Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/data-modelling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Modeling Concepts for Streaming Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    01 core entities
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            01 core entities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/01-core-entities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Core Entities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/01-core-entities/accounts-profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accounts &amp; Profiles Modeling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/01-core-entities/content-catalog-modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Content Catalog Modeling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/01-core-entities/subscriptions-billing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Subscriptions &amp; Billing Modeling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    02 relationships patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            02 relationships patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/02-relationships-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Relationships &amp; Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/02-relationships-patterns/many-to-many-relationships/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Many-to-Many Relationships
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/02-relationships-patterns/recommendations-storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recommendations Storage Modeling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/02-relationships-patterns/user-viewing-history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Viewing History Modeling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_5" id="__nav_2_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    03 event streaming
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            03 event streaming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/03-event-streaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Event Streaming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/03-event-streaming/ab-testing-data-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A/B Testing Data Models
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/03-event-streaming/engagement-metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Engagement Metrics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/03-event-streaming/streaming-quality-metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Streaming Quality Metrics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_6" id="__nav_2_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    04 scalability patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            04 scalability patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/04-scalability-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scalability Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/04-scalability-patterns/event-streaming-at-scale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Event Streaming at Scale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-modeling/04-scalability-patterns/partitioning-sharding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Partitioning &amp; Sharding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sql
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sql
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Concepts Overview &amp; Learning Hub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/advanced-sql-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced SQL Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Aggregation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Aggregation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aggregation/aggregate-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Aggregate Functions: Comprehensive Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aggregation/monthly-ratings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Question 2: Analyzing Monthly Average Ratings of Airbnb Property Listings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_4" id="__nav_2_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cte
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Cte
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cte/cte-vs-window-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CTE vs Window Functions: Performance and Readability Comparison
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cte/customer-sales-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customer Sales Analysis Using CTE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cte/vacant-days-detailed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Question Average Vacant Days for Active Airbnb Listings in 2021
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_5" id="__nav_2_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Extras
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Extras
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Extras - External Content Repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    SQL Interview Questions Streaming &amp; Media Analytics
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Interview Questions Streaming &amp; Media Analytics
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beginner-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beginner Level
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beginner Level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-daily-active-users-dau" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 Daily Active Users (DAU)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-day-1-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Day-1 Retention
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intermediate-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intermediate Level
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intermediate Level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-most-watched-show-per-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Most Watched Show per Day
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-top-3-shows-per-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Top 3 Shows per Region
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-consecutive-days-watching" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Consecutive Days Watching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Level
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-heavy-watchers-retention-cte" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Heavy Watchers Retention (CTE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-content-hierarchy-recursive-cte" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 Content Hierarchy (Recursive CTE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-percentile-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      8 Percentile Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-recommendation-acceptance-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      9 Recommendation Acceptance Rate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization Challenges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimization Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10-efficient-dau-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      10 Efficient DAU Calculation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10 Efficient DAU Calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-time-based-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      11 Time-based Partitioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-efficient-top-n-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      12 Efficient Top-N Queries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-References
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cross-References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-sql-concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main SQL Concepts Covered
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-domains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Domains
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difficulty-progression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difficulty Progression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Path
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#this-guide-is-designed-for-sql-interviews-at-streaming-companies-and-covers-the-most-common-patterns-encountered-in-data-analyst-and-data-engineer-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      This guide is designed for SQL interviews at streaming companies and covers the most common patterns encountered in data analyst and data engineer roles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-contributor-guidelines-and-organizational-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix Contributor Guidelines and Organizational Templates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toptal-sql-interview-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      TopTal SQL Interview Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Content Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Content Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interview-question-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interview Question Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interview Question Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-analysis-in-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      data-analysis - In Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ranking-problems-in-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      ranking-problems - In Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-joins-in-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      complex-joins - In Development
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interview-question-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Interview Question Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Interview Question Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Statement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sample Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimal-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimal Solution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toptal-source-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 TopTal Source Material
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difficulty-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Difficulty Distribution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interview-preparation-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Interview Preparation Focus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Interview Preparation Focus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-toptal-sql-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common TopTal SQL Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toptal-specific-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      TopTal-Specific Preparation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-new-interview-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Adding New Interview Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigate-back-to-sql-extras-sql-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigate back to SQL Extras | SQL Concepts
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wikibooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Exercises from Wikibooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_6" id="__nav_2_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Joins
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Joins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../joins/page-impressions-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Page Impressions and User Actions Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_7" id="__nav_2_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Optimization
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Optimization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimization/sql-optimization-challenges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Optimization Challenges
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_8" id="__nav_2_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Problems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Problems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Practice Problems Hub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problems/advanced-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced SQL Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problems/optimization-challenges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Optimization Challenges
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_8_4" id="__nav_2_3_8_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    01 basic analytics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            01 basic analytics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problems/01-basic-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Analytics Problems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problems/01-basic-analytics/daily-active-users/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Active Users (DAU)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problems/01-basic-analytics/day-1-retention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Day-1 Retention
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problems/01-basic-analytics/most-watched-show-per-day/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Most Watched Show per Day
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_8_5" id="__nav_2_3_8_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    02 ranking window functions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            02 ranking window functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problems/02-ranking-window-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ranking Window Functions Problems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problems/02-ranking-window-functions/consecutive-days-watching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Consecutive Days Watching
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problems/02-ranking-window-functions/top-3-shows-per-region/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Top 3 Shows per Region
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_9" id="__nav_2_3_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Subqueries
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            Subqueries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../subqueries/subqueries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🔹 Subqueries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_10" id="__nav_2_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Window functions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            Window functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../window-functions/postgresql-advanced-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PostgreSQL Advanced Window Functions - Complete Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../window-functions/postgresql-interview-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PostgreSQL Window Functions - Interview Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../window-functions/postgresql-navigation-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PostgreSQL Navigation Functions - Complete Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../window-functions/postgresql-ranking-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PostgreSQL Ranking Functions - Complete Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../window-functions/window-avg-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PostgreSQL Window Functions AVG with OVER() Clause
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../window-functions/window-avg-simplified/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PostgreSQL Window Functions Advanced AVG with OVER()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../window-functions/window-functions-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🔹 PostgreSQL Window Functions - Complete Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    System design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            System design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../system-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Design &amp; Advanced Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../system-design/case-studies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Case Studies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../system-design/experimentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Experimentation and A/B Testing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../system-design/performance-optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Performance Optimization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../system-design/system-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Interviews
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Interviews
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../interviews/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interview Problems Collection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Anthropic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Anthropic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../interviews/Anthropic/anthropic-chatgpt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🧠 Anthropic Interview Prep Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../interviews/Anthropic/anthropic-claude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Consolidated Anthropic Interview Questions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Netflix
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Netflix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../interviews/netflix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netflix Interview Preparation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beginner-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beginner Level
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beginner Level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-daily-active-users-dau" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 Daily Active Users (DAU)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-day-1-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Day-1 Retention
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intermediate-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intermediate Level
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intermediate Level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-most-watched-show-per-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Most Watched Show per Day
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-top-3-shows-per-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Top 3 Shows per Region
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-consecutive-days-watching" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Consecutive Days Watching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Level
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-heavy-watchers-retention-cte" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Heavy Watchers Retention (CTE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-content-hierarchy-recursive-cte" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 Content Hierarchy (Recursive CTE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-percentile-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      8 Percentile Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-recommendation-acceptance-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      9 Recommendation Acceptance Rate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization Challenges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimization Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10-efficient-dau-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      10 Efficient DAU Calculation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10 Efficient DAU Calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-time-based-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      11 Time-based Partitioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-efficient-top-n-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      12 Efficient Top-N Queries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-References
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cross-References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-sql-concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main SQL Concepts Covered
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-domains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Domains
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difficulty-progression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difficulty Progression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Path
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#this-guide-is-designed-for-sql-interviews-at-streaming-companies-and-covers-the-most-common-patterns-encountered-in-data-analyst-and-data-engineer-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      This guide is designed for SQL interviews at streaming companies and covers the most common patterns encountered in data analyst and data engineer roles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-contributor-guidelines-and-organizational-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix Contributor Guidelines and Organizational Templates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toptal-sql-interview-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      TopTal SQL Interview Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Content Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Content Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interview-question-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interview Question Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interview Question Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-analysis-in-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      data-analysis - In Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ranking-problems-in-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      ranking-problems - In Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-joins-in-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      complex-joins - In Development
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interview-question-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Interview Question Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Interview Question Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Statement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sample Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimal-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimal Solution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toptal-source-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 TopTal Source Material
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difficulty-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Difficulty Distribution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interview-preparation-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Interview Preparation Focus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Interview Preparation Focus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-toptal-sql-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common TopTal SQL Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toptal-specific-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      TopTal-Specific Preparation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-new-interview-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Adding New Interview Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigate-back-to-sql-extras-sql-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigate back to SQL Extras | SQL Concepts
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sql-interview-questions-streaming-media-analytics">SQL Interview Questions Streaming &amp; Media Analytics</h1>
+<p>This comprehensive guide covers SQL interview questions specifically tailored for streaming and media companies like Netflix, focusing on user analytics, content performance, and business metrics.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li>
+<p><a href="#beginner-level">Beginner Level</a></p>
+</li>
+<li>
+<p><a href="#intermediate-level">Intermediate Level</a></p>
+</li>
+<li>
+<p><a href="#advanced-level">Advanced Level</a></p>
+</li>
+<li>
+<p><a href="#optimization-challenges">Optimization Challenges</a></p>
+</li>
+<li>
+<p><a href="#cross-references">Cross-References</a></p>
+</li>
+</ul>
+<h2 id="beginner-level">Beginner Level</h2>
+<h3 id="1-daily-active-users-dau">1 Daily Active Users (DAU)</h3>
+<p><strong><em>Business Context: DAU</em></strong>:</p>
+<pre><code> User engagement metrics for streaming platforms.
+</code></pre>
+<p><strong><em>Question</em></strong>:</p>
+<pre><code> You have a table `user_activity`:
+
+ | user_id | activity_date | activity_type |
+ |---------|---------------|---------------|
+ | 101     | 2025-08-01    | play          |
+ | 101     | 2025-08-01    | pause         |
+ | 102     | 2025-08-01    | play          |
+ | 103     | 2025-08-02    | play          |
+
+ Write a query to find the number of **unique active users per day**.
+</code></pre>
+<p><strong><em>Solution</em></strong>:</p>
+<pre><code class="language-sql">SELECT
+    activity_date,
+    COUNT(DISTINCT user_id) AS daily_active_users
+FROM user_activity
+GROUP BY activity_date
+ORDER BY activity_date;
+</code></pre>
+<p><strong><em>Learning Objectives</em></strong>:</p>
+<pre><code>- Basic aggregation with `COUNT(DISTINCT)`
+- Grouping data by date
+- Understanding user activity metrics
+</code></pre>
+<p><strong><em>Related Concepts</em></strong>:</p>
+<p><a href="aggregation-functions.md"><code>aggregation-functions.md</code></a></p>
+<hr />
+<h3 id="2-day-1-retention">2 Day-1 Retention</h3>
+<p><strong><em>Business Context</em></strong>:</p>
+<pre><code> User retention analysis for subscription services.
+</code></pre>
+<p><strong><em>Question</em></strong>:</p>
+<pre><code> From `user_signup(user_id, signup_date)` and `user_activity(user_id, activity_date)`, calculate **Day-1 retention** (users who signed up on Day X and came back on Day X+1).
+</code></pre>
+<p><strong><em>Solution</em></strong>:</p>
+<pre><code class="language-sql">SELECT
+    s.signup_date,
+    COUNT(DISTINCT a.user_id) * 1.0 / COUNT(DISTINCT s.user_id) AS day1_retention
+FROM user_signup s
+LEFT JOIN user_activity a
+    ON s.user_id = a.user_id
+    AND a.activity_date = DATE_ADD(s.signup_date, INTERVAL 1 DAY)
+GROUP BY s.signup_date;
+</code></pre>
+<p><strong><em>Learning Objectives</em></strong>:</p>
+<pre><code>- Cohort analysis patterns
+- Percentage calculations with joins
+- Understanding retention metrics
+</code></pre>
+<p><strong><em>Related Concepts</em></strong>:</p>
+<p><a href="joins.md"><code>joins.md</code></a>, <a href="aggregation-functions.md"><code>aggregation-functions.md</code></a></p>
+<h2 id="intermediate-level">Intermediate Level</h2>
+<h3 id="3-most-watched-show-per-day">3 Most Watched Show per Day</h3>
+<p><strong><em>Business Context</em></strong>:</p>
+<pre><code> Content popularity analysis.
+</code></pre>
+<p><strong><em>Question</em></strong>:</p>
+<pre><code> Table `watch_history`:
+
+ | user_id | show_id | watch_date | watch_time_minutes |
+ |---------|---------|------------|-------------------|
+ | 1       | A       | 2025-08-01 | 30                |
+ | 2       | A       | 2025-08-01 | 50                |
+ | 3       | B       | 2025-08-01 | 80                |
+
+ Find the **most watched show per day** (based on total minutes).
+</code></pre>
+<p><strong><em>Solution</em></strong>:</p>
+<pre><code class="language-sql">SELECT watch_date, show_id
+FROM (
+    SELECT
+        watch_date,
+        show_id,
+        SUM(watch_time_minutes) AS total_watch_time,
+        RANK() OVER (PARTITION BY watch_date ORDER BY SUM(watch_time_minutes) DESC) AS rnk
+    FROM watch_history
+    GROUP BY watch_date, show_id
+) t
+WHERE rnk = 1;
+</code></pre>
+<p><strong><em>Learning Objectives</em></strong>:</p>
+<pre><code>- Window functions for ranking
+- Subquery patterns
+- Top-N per category problems
+</code></pre>
+<p><strong><em>Related Concepts</em></strong>:</p>
+<p><a href="window-functions-overview.md"><code>window-functions-overview.md</code></a>, <a href="ranking-functions.md"><code>ranking-functions.md</code></a></p>
+<hr />
+<h3 id="4-top-3-shows-per-region">4 Top 3 Shows per Region</h3>
+<p><strong><em>Business Context</em></strong>:</p>
+<pre><code> Regional content performance analysis.
+</code></pre>
+<p><strong><em>Question</em></strong>:</p>
+<pre><code> Table `viewership(user_id, show_id, region, watch_time)`. Find the **top 3 most watched shows per region** by total minutes.
+</code></pre>
+<p><strong><em>Solution</em></strong>:</p>
+<pre><code class="language-sql">SELECT region, show_id, total_watch_time
+FROM (
+    SELECT
+        region,
+        show_id,
+        SUM(watch_time) AS total_watch_time,
+        DENSE_RANK() OVER (PARTITION BY region ORDER BY SUM(watch_time) DESC) AS rnk
+    FROM viewership
+    GROUP BY region, show_id
+) t
+WHERE rnk &lt;= 3;
+</code></pre>
+<p><strong><em>Learning Objectives</em></strong>:</p>
+<pre><code>- Difference between RANK() and DENSE_RANK()
+- Multi-level partitioning
+- Top-N queries per category
+</code></pre>
+<p><strong><em>Related Concepts</em></strong>:</p>
+<p><a href="window-functions-overview.md"><code>window-functions-overview.md</code></a>, <a href="ranking-functions.md"><code>ranking-functions.md</code></a></p>
+<hr />
+<h3 id="5-consecutive-days-watching">5 Consecutive Days Watching</h3>
+<p><strong><em>Business Context</em></strong>:</p>
+<pre><code> User engagement streak analysis.
+</code></pre>
+<p><strong><em>Question</em></strong>:</p>
+<pre><code> From `user_activity(user_id, activity_date)`, find users who have watched content for **3 consecutive days**.
+</code></pre>
+<p><strong><em>Solution</em></strong>:</p>
+<pre><code class="language-sql">SELECT DISTINCT user_id
+FROM (
+    SELECT
+        user_id,
+        activity_date,
+        LAG(activity_date,1) OVER (PARTITION BY user_id ORDER BY activity_date) AS prev_day,
+        LAG(activity_date,2) OVER (PARTITION BY user_id ORDER BY activity_date) AS prev2_day
+    FROM user_activity
+) t
+WHERE DATEDIFF(activity_date, prev_day) = 1
+AND DATEDIFF(prev_day, prev2_day) = 1;
+</code></pre>
+<p><strong><em>Learning Objectives</em></strong>:</p>
+<pre><code>- Using LAG() for sequential analysis
+- Date arithmetic in SQL
+- Streak detection patterns
+</code></pre>
+<p><strong><em>Related Concepts</em></strong>:</p>
+<p><a href="navigation-functions.md"><code>navigation-functions.md</code></a>, <a href="window-functions-overview.md"><code>window-functions-overview.md</code></a></p>
+<h2 id="advanced-level">Advanced Level</h2>
+<h3 id="6-heavy-watchers-retention-cte">6 Heavy Watchers Retention (CTE)</h3>
+<p><strong><em>Business Context</em></strong>:</p>
+<p>Advanced user segmentation and retention.</p>
+<p><strong><em>Question</em></strong>:</p>
+<p>Find users who watched &gt;100 minutes in a day, and then find how many of them watched again the next day.</p>
+<p><strong><em>Solution</em></strong>:</p>
+<pre><code class="language-sql">WITH daily_watch AS (
+    SELECT
+        user_id,
+        DATE(event_ts) AS watch_date,
+        SUM(watch_time) AS total_minutes
+    FROM watch_events
+    GROUP BY user_id, DATE(event_ts)
+),
+heavy_watchers AS (
+    SELECT user_id, watch_date
+    FROM daily_watch
+    WHERE total_minutes &gt; 100
+)
+SELECT COUNT(DISTINCT h1.user_id) AS retained_users
+FROM heavy_watchers h1
+JOIN heavy_watchers h2
+    ON h1.user_id = h2.user_id
+    AND h2.watch_date = DATE_ADD(h1.watch_date, INTERVAL 1 DAY);
+</code></pre>
+<p><strong><em>Learning Objectives</em></strong>:</p>
+<ul>
+<li>Common Table Expressions (CTEs)</li>
+<li>Multi-step data transformation</li>
+<li>Advanced retention analysis</li>
+</ul>
+<p><strong><em>Related Concepts</em></strong>:</p>
+<p><a href="cte-overview.md"><code>cte-overview.md</code></a></p>
+<hr />
+<h3 id="7-content-hierarchy-recursive-cte">7 Content Hierarchy (Recursive CTE)</h3>
+<p><strong><em>Business Context</em></strong>:</p>
+<p>Managing hierarchical content structures.</p>
+<p><strong><em>Question</em></strong>:</p>
+<p>Model content hierarchy (seasons, episodes) using recursive CTEs.</p>
+<p><strong><em>Solution</em></strong>:</p>
+<pre><code class="language-sql">WITH RECURSIVE content_hierarchy AS (
+    -- Base case: top-level content
+    SELECT
+        content_id,
+        parent_id,
+        title,
+        0 AS level,
+        CAST(content_id AS VARCHAR) AS path
+    FROM content
+    WHERE parent_id IS NULL
+
+    UNION ALL
+
+    -- Recursive case: child content
+    SELECT
+        c.content_id,
+        c.parent_id,
+        c.title,
+        ch.level + 1,
+        CONCAT(ch.path, '&gt;', c.content_id)
+    FROM content c
+    JOIN content_hierarchy ch ON c.parent_id = ch.content_id
+)
+SELECT * FROM content_hierarchy ORDER BY path;
+</code></pre>
+<p><strong><em>Learning Objectives</em></strong>:</p>
+<ul>
+<li>Recursive CTE patterns</li>
+<li>Hierarchical data modeling</li>
+<li>Tree traversal in SQL</li>
+</ul>
+<p><strong><em>Related Concepts</em></strong>:</p>
+<p><a href="cte-overview.md"><code>cte-overview.md</code></a></p>
+<hr />
+<h3 id="8-percentile-analysis">8 Percentile Analysis</h3>
+<p><strong><em>Business Context</em></strong>:</p>
+<p>Statistical analysis of user behavior.</p>
+<p><strong><em>Question</em></strong>:</p>
+<p>Find the top 1% of users by total watch time.</p>
+<p><strong><em>Solution</em></strong>:</p>
+<pre><code class="language-sql">WITH user_totals AS (
+    SELECT
+        user_id,
+        SUM(watch_time) AS total_watch_time
+    FROM watch_events
+    GROUP BY user_id
+),
+ranked AS (
+    SELECT
+        user_id,
+        total_watch_time,
+        PERCENT_RANK() OVER (ORDER BY total_watch_time DESC) AS pct_rank
+    FROM user_totals
+)
+SELECT user_id, total_watch_time
+FROM ranked
+WHERE pct_rank &lt;= 0.01;
+</code></pre>
+<p><strong><em>Learning Objectives</em></strong>:</p>
+<ul>
+<li>Statistical functions in SQL</li>
+<li>Percentile calculations</li>
+<li>User segmentation</li>
+</ul>
+<p><strong><em>Related Concepts</em></strong>:</p>
+<p><a href="advanced-window-functions.md"><code>advanced-window-functions.md</code></a></p>
+<hr />
+<h3 id="9-recommendation-acceptance-rate">9 Recommendation Acceptance Rate</h3>
+<p><strong><em>Business Context</em></strong>:</p>
+<p>Measuring recommendation system effectiveness.</p>
+<p><strong><em>Question</em></strong>:</p>
+<p>Measure how many recommended shows were actually watched.</p>
+<p><strong><em>Solution</em></strong>:</p>
+<pre><code class="language-sql">SELECT
+    COUNT(DISTINCT CASE WHEN w.user_id IS NOT NULL THEN r.user_id END) * 100.0 /
+    COUNT(DISTINCT r.user_id) AS acceptance_rate_pct
+FROM recommendations r
+LEFT JOIN watch_events w
+    ON r.user_id = w.user_id
+    AND r.show_id = w.show_id
+    AND w.event_ts BETWEEN r.recommendation_ts
+                         AND r.recommendation_ts + INTERVAL '24' HOUR;
+</code></pre>
+<p><strong><em>Learning Objectives</em></strong>:</p>
+<ul>
+<li>Complex join conditions with time windows</li>
+<li>Conditional aggregation</li>
+<li>A/B testing analysis patterns</li>
+</ul>
+<p><strong><em>Related Concepts</em></strong>:</p>
+<p><a href="joins.md"><code>joins.md</code></a>, <a href="aggregation-functions.md"><code>aggregation-functions.md</code></a></p>
+<h2 id="optimization-challenges">Optimization Challenges</h2>
+<h3 id="10-efficient-dau-calculation">10 Efficient DAU Calculation</h3>
+<p><strong><em>Business Context</em></strong>:</p>
+<p>Performance optimization for large-scale analytics.</p>
+<p><strong><em>Question</em></strong>:</p>
+<p>Optimizing daily active users query for large datasets.</p>
+<p><strong><em>Solutions</em></strong>:</p>
+<pre><code class="language-sql">-- Optimized version with date range limiting
+SELECT
+    DATE(event_ts) AS activity_date,
+    COUNT(DISTINCT user_id) AS daily_active_users
+FROM watch_events
+WHERE event_ts &gt;= CURRENT_DATE - INTERVAL '30' DAY
+    AND event_ts &lt; CURRENT_DATE
+GROUP BY DATE(event_ts)
+ORDER BY activity_date;
+
+-- Approximate counting for very large datasets
+SELECT
+    DATE(event_ts) AS activity_date,
+    APPROX_COUNT_DISTINCT(user_id) AS approx_dau
+FROM watch_events
+WHERE event_ts &gt;= CURRENT_DATE - INTERVAL '30' DAY
+GROUP BY DATE(event_ts);
+</code></pre>
+<h4 id="learning-objectives">Learning Objectives</h4>
+<ul>
+<li>Query performance optimization</li>
+<li>Approximate vs exact calculations</li>
+<li>Date range filtering</li>
+</ul>
+<p><strong><em>Related Concepts</em></strong>:</p>
+<p><a href="sql-optimization-challenges.md"><code>sql-optimization-challenges.md</code></a></p>
+<hr />
+<h3 id="11-time-based-partitioning">11 Time-based Partitioning</h3>
+<p><strong><em>Business Context</em></strong>:</p>
+<p>Database design for time-series data.</p>
+<p><strong><em>Question</em></strong>:</p>
+<p>Optimizing for time-series queries with partitioning.</p>
+<p><strong><em>Solution</em></strong>:</p>
+<pre><code class="language-sql">-- Partition by day for efficient date range queries
+CREATE TABLE watch_events (
+    event_id BIGINT,
+    user_id BIGINT,
+    show_id BIGINT,
+    event_ts TIMESTAMP,
+    watch_time INT
+)
+PARTITION BY DATE(event_ts);
+
+-- Query benefits from partition pruning
+SELECT COUNT(DISTINCT user_id)
+FROM watch_events
+WHERE event_ts &gt;= '2025-01-01'
+    AND event_ts &lt; '2025-02-01';
+</code></pre>
+<p><strong><em>Learning Objectives</em></strong>:</p>
+<ul>
+<li>Database partitioning strategies</li>
+<li>Partition pruning</li>
+<li>Schema design for analytics</li>
+</ul>
+<p><strong><em>Related Concepts</em></strong>:</p>
+<p><a href="partitioning-sharding.md"><code>partitioning-sharding.md</code></a></p>
+<hr />
+<h3 id="12-efficient-top-n-queries">12 Efficient Top-N Queries</h3>
+<p><strong><em>Business Context</em></strong>:</p>
+<p>Performance optimization for ranking queries.</p>
+<p><strong><em>Question</em></strong>:</p>
+<p>Optimizing ranking queries with large datasets.</p>
+<p><strong><em>Solution</em></strong>:</p>
+<pre><code class="language-sql">-- Use LIMIT with proper ordering for Top-N
+SELECT show_id, SUM(watch_time) AS total_watch_time
+FROM watch_events
+WHERE event_ts &gt;= CURRENT_DATE - INTERVAL '7' DAY
+GROUP BY show_id
+ORDER BY total_watch_time DESC
+LIMIT 10;
+
+-- Pre-aggregate for frequently accessed metrics
+CREATE MATERIALIZED VIEW daily_show_metrics AS
+SELECT
+    DATE(event_ts) AS watch_date,
+    show_id,
+    COUNT(DISTINCT user_id) AS unique_viewers,
+    SUM(watch_time) AS total_watch_time
+FROM watch_events
+GROUP BY DATE(event_ts), show_id;
+</code></pre>
+<p><strong><em>Learning Objectives</em></strong>:</p>
+<ul>
+<li>LIMIT clause optimization</li>
+<li>Materialized views</li>
+<li>Pre-aggregation strategies</li>
+</ul>
+<p><strong><em>Related Concepts</em></strong>:</p>
+<p><a href="sql-optimization-challenges.md"><code>sql-optimization-challenges.md</code></a></p>
+<h2 id="cross-references">Cross-References</h2>
+<h3 id="main-sql-concepts-covered">Main SQL Concepts Covered</h3>
+<ul>
+<li><strong>Aggregation Functions</strong>: <a href="aggregation-functions.md"><code>aggregation-functions.md</code></a></li>
+<li><strong>Window Functions</strong>: <a href="window-functions-overview.md"><code>window-functions-overview.md</code></a></li>
+<li><strong>Common Table Expressions</strong>: <a href="cte-overview.md"><code>cte-overview.md</code></a></li>
+<li><strong>Joins</strong>: <a href="joins.md"><code>joins.md</code></a></li>
+<li><strong>Subqueries</strong>: <a href="subqueries.md"><code>subqueries.md</code></a></li>
+<li><strong>Optimization</strong>: <a href="sql-optimization-challenges.md"><code>sql-optimization-challenges.md</code></a></li>
+</ul>
+<h3 id="business-domains">Business Domains</h3>
+<ul>
+<li><strong>Streaming Analytics</strong>: User engagement, content performance</li>
+<li><strong>Subscription Metrics</strong>: Retention, churn analysis</li>
+<li><strong>Recommendation Systems</strong>: Acceptance rate, personalization</li>
+<li><strong>Content Management</strong>: Hierarchical data, catalog analytics</li>
+</ul>
+<h3 id="difficulty-progression">Difficulty Progression</h3>
+<ul>
+<li><strong>Beginner</strong>: Basic aggregation, simple joins</li>
+<li><strong>Intermediate</strong>: Window functions, ranking, date arithmetic</li>
+<li><strong>Advanced</strong>: CTEs, recursive queries, statistical functions</li>
+<li><strong>Expert</strong>: Complex joins, performance optimization, schema design</li>
+</ul>
+<h3 id="learning-path">Learning Path</h3>
+<ol>
+<li>Start with basic aggregation and joins</li>
+<li>Learn window functions for advanced analytics</li>
+<li>Master CTEs and subqueries for complex transformations</li>
+<li>Study optimization techniques for production environments</li>
+<li>Explore recursive patterns for hierarchical data</li>
+</ol>
+<hr />
+<h2 id="this-guide-is-designed-for-sql-interviews-at-streaming-companies-and-covers-the-most-common-patterns-encountered-in-data-analyst-and-data-engineer-roles">This guide is designed for SQL interviews at streaming companies and covers the most common patterns encountered in data analyst and data engineer roles</h2>
+<h2 id="appendix-contributor-guidelines-and-organizational-templates">Appendix Contributor Guidelines and Organizational Templates</h2>
+<h2 id="toptal-sql-interview-questions">TopTal SQL Interview Questions</h2>
+<p>This directory contains SQL interview questions and coding challenges adapted from <a href="https://www.toptal.com/">TopTal's engineering blog</a> and SQL interview preparation resources. Focus is on real-world interview scenarios and advanced SQL patterns.</p>
+<h2 id="content-overview">📚 Content Overview</h2>
+<h3 id="interview-question-categories">Interview Question Categories</h3>
+<h4 id="data-analysis-in-development"><a href="data-analysis/">data-analysis</a> - <em>In Development</em></h4>
+<ul>
+<li>Business metrics and KPI calculations</li>
+<li>Customer segmentation and analytics</li>
+<li>Revenue and performance analysis</li>
+<li>A/B testing data analysis</li>
+</ul>
+<h4 id="ranking-problems-in-development"><a href="ranking-problems/">ranking-problems</a> - <em>In Development</em></h4>
+<ul>
+<li>Top-N queries and ranking patterns</li>
+<li>Percentile calculations and distributions</li>
+<li>Running totals and moving averages</li>
+<li>Competitive analysis queries</li>
+</ul>
+<h4 id="complex-joins-in-development"><a href="complex-joins/">complex-joins</a> - <em>In Development</em></h4>
+<ul>
+<li>Multi-level hierarchical data</li>
+<li>Complex relationship traversals</li>
+<li>Data warehousing patterns</li>
+<li>ETL and data pipeline queries</li>
+</ul>
+<h2 id="interview-question-structure">🎯 Interview Question Structure</h2>
+<p>Each interview question follows this format:</p>
+<h3 id="problem-statement">Problem Statement</h3>
+<p>Real-world business scenario requiring SQL solution</p>
+<p><strong><em>Business Context</em></strong>:</p>
+<ul>
+<li><strong>Company</strong>: Tech startup, e-commerce, SaaS platform</li>
+<li><strong>Data Scale</strong>: Millions of users, billions of events</li>
+<li><strong>Performance Requirements</strong>: Sub-second response time</li>
+<li><strong>Business Impact</strong>: Revenue optimization, user engagement, fraud detection</li>
+</ul>
+<h3 id="schema-design">Schema Design</h3>
+<pre><code class="language-sql">-- Production-ready table schemas
+CREATE TABLE users (
+    user_id BIGINT PRIMARY KEY,
+    created_at TIMESTAMP,
+    country VARCHAR(2),
+    subscription_status VARCHAR(20)
+) PARTITION BY created_at;
+
+CREATE TABLE user_events (
+    event_id BIGINT PRIMARY KEY,
+    user_id BIGINT,
+    event_type VARCHAR(50),
+    event_value DECIMAL(10,2),
+    event_timestamp TIMESTAMP
+) PARTITION BY event_timestamp;
+</code></pre>
+<h3 id="sample-data">Sample Data</h3>
+<pre><code class="language-sql">-- Representative dataset for testing
+INSERT INTO users VALUES
+(1, '2023-01-01', 'US', 'premium'),
+(2, '2023-01-15', 'CA', 'basic');
+</code></pre>
+<h4 id="solution-requirements">Solution Requirements</h4>
+<ul>
+<li><strong>Expected Output</strong>: Specific format and columns</li>
+<li><strong>Performance Constraints</strong>: Query must complete within time limits</li>
+<li><strong>Edge Cases</strong>: Handle NULL values, empty results, data quality issues</li>
+</ul>
+<h3 id="optimal-solution">Optimal Solution</h3>
+<pre><code class="language-sql">-- Production-ready SQL with performance considerations
+WITH user_metrics AS (
+    SELECT
+        u.user_id,
+        u.country,
+        COUNT(ue.event_id) as event_count,
+        SUM(ue.event_value) as total_value,
+        AVG(ue.event_value) as avg_value
+    FROM users u
+    LEFT JOIN user_events ue ON u.user_id = ue.user_id
+        AND ue.event_timestamp &gt;= u.created_at
+    WHERE u.subscription_status = 'premium'
+    GROUP BY u.user_id, u.country
+)
+SELECT
+    country,
+    COUNT(*) as premium_users,
+    AVG(event_count) as avg_events_per_user,
+    SUM(total_value) as total_revenue
+FROM user_metrics
+GROUP BY country
+ORDER BY total_revenue DESC;
+</code></pre>
+<h3 id="performance-analysis">Performance Analysis</h3>
+<ul>
+<li><strong>Query Execution Plan</strong>: Index usage, join strategies</li>
+<li><strong>Optimization Opportunities</strong>: Partitioning, materialized views</li>
+<li><strong>Scalability Considerations</strong>: Data volume impact, memory usage</li>
+</ul>
+<h2 id="toptal-source-material">🔗 TopTal Source Material</h2>
+<p>Based on TopTal's SQL interview preparation articles:</p>
+<ul>
+<li><a href="https://www.toptal.com/sql/interview-questions">SQL Interview Questions</a></li>
+<li><a href="https://www.toptal.com/database">Database Design Patterns</a></li>
+<li><a href="https://www.toptal.com/data-engineering">Data Engineering Challenges</a></li>
+</ul>
+<h2 id="difficulty-distribution">📊 Difficulty Distribution</h2>
+<table>
+<thead>
+<tr>
+<th>Difficulty</th>
+<th>Count</th>
+<th>Focus Areas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟡 Intermediate</td>
+<td>~12 questions</td>
+<td>Complex analytics, multi-table queries</td>
+</tr>
+<tr>
+<td>🟠 Advanced</td>
+<td>~8 questions</td>
+<td>Window functions, CTEs, optimization</td>
+</tr>
+<tr>
+<td>🔴 Expert</td>
+<td>~5 questions</td>
+<td>Large-scale data, performance tuning</td>
+</tr>
+</tbody>
+</table>
+<h2 id="interview-preparation-focus">🎯 Interview Preparation Focus</h2>
+<h3 id="common-toptal-sql-patterns">Common TopTal SQL Patterns</h3>
+<ol>
+<li><strong>Revenue Analytics</strong> - Customer lifetime value, cohort analysis</li>
+<li><strong>User Behavior Analysis</strong> - Funnel analysis, retention metrics</li>
+<li><strong>Performance Optimization</strong> - Query tuning, index strategies</li>
+<li><strong>Data Quality</strong> - NULL handling, data validation</li>
+<li><strong>Scalability</strong> - Partitioning, query optimization for large datasets</li>
+</ol>
+<h3 id="toptal-specific-preparation">TopTal-Specific Preparation</h3>
+<ul>
+<li>Focus on business context and real-world applications</li>
+<li>Emphasize performance and scalability considerations</li>
+<li>Practice explaining query logic and optimization decisions</li>
+<li>Understand trade-offs between different solution approaches</li>
+</ul>
+<h2 id="adding-new-interview-questions">📝 Adding New Interview Questions</h2>
+<p>When adding TopTal-style questions:</p>
+<ol>
+<li>Include complete business context and requirements</li>
+<li>Provide production-ready schema with constraints</li>
+<li>Include performance analysis and optimization notes</li>
+<li>Tag with relevant SQL concepts and business domains</li>
+<li>Reference original TopTal article when applicable</li>
+</ol>
+<hr />
+<h2 id="navigate-back-to-sql-extras-sql-concepts">Navigate back to <a href="../../">SQL Extras</a> | <a href="../../../">SQL Concepts</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["search", "content.code.copy", "navigation.tabs", "navigation.sections", "navigation.instant", "navigation.expand", "navigation.tracking", "tabs.sticky", "toc.sticky", "toc.permalink", "toc.follow", "content.tabs", "content.tabs.links", "content.tabs.sticky", "content.tabs.indicator"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
