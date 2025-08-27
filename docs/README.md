@@ -1,4 +1,4 @@
-# Interview Concepts Repository
+# Interview Concepts
 
 ## Project Overview
 
@@ -10,9 +10,9 @@ This repository serves as a comprehensive resource for interview preparation, fo
 
 The concepts directory offers structured guidance across three main technical domains:
 
-- **SQL**: Database querying, analytics, and performance optimization
-- **Data Modeling**: Database design patterns and architectural principles
-- **System Design**: Scalable system architecture and design patterns
+- [**SQL**](concepts/sql/): Database querying, analytics, and performance optimization
+- [**Data Modeling**](concepts/data-modeling/): Database design patterns and architectural principles
+- [**System Design**](concepts/system-design/): Scalable system architecture and design patterns
 
 Each area includes progressive learning paths from fundamentals to advanced techniques, with practical exercises and real-world case studies.
 

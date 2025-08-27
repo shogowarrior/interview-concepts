@@ -62,7 +62,7 @@ theme:
       name: Switch to system preference
   
   nav:
-    - Home:index.md
+    - Home: README.md
     - Concepts:
         - SQL: concepts/sql/README.md
         - Data Modeling: concepts/data-modeling/README.md
