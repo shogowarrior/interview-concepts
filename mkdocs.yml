@@ -1,0 +1,74 @@
+site_name: Interview Concepts
+theme:
+  name: material
+  # features
+  #   - search
+  #   - content.code.annotate
+  #   - content.code.copy
+  #   - content.code.highlight
+  #   - content.tabs.links
+  #   - header.autohide
+  #   - navigation.sections
+  #   - navigation.instant
+  #   - navigation.expand
+  #   - navigation.tracking
+  #   - search.suggestions
+  #   - search.highlight
+  #   - search.shared
+  #   - search.filter
+  #   - search.show_on_empty
+  #   - toc.follow
+  #   - toc.sticky
+  #   - toc.permalink
+  #   - tabs.sticky
+  #   - tabs.indicator
+  #   - tabs.bottom
+  #   - tabs.expand
+  #   - tabs.stylized
+  #   - content.tabs.sticky
+  #   - content.tabs.indicator
+
+  features:
+    - search
+    - content.code.copy
+    - navigation.tabs
+    - navigation.sections
+    - navigation.instant
+    - navigation.expand
+    - navigation.tracking
+    - tabs.sticky
+    - toc.sticky
+    - toc.permalink
+    - toc.follow
+    - content.tabs
+    - content.tabs.links
+    - content.tabs.sticky
+    - content.tabs.indicator
+  palette:
+    - media: "(prefers-color-scheme)"
+      scheme: default
+      toggle:
+      icon: material/brightness-auto
+      name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+      icon: material/brightness-4
+      name: Switch to system preference
+  
+  nav:
+    - Home:index.md
+    - Concepts:
+        - SQL: concepts/sql/README.md
+        - Data Modeling: concepts/data-modeling/README.md
+        - System Design: concepts/system-design/README.md
+    - Interviews:
+        - Anthropic: interviews/Anthropic/anthropic-claude.md
+        - Netflix: interviews/netflix/README.md
+        - Nextdoor: interviews/nextdoor/comments.py
+        - Okareo: interviews/okareo/solution.py

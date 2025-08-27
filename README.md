@@ -6,16 +6,18 @@ This repository serves as a comprehensive resource for interview preparation, fo
 
 ## Key Areas
 
-### [Concepts](./concepts/)
+### [Concepts](./docs/concepts/)
+
 The concepts directory offers structured guidance across three main technical domains:
 
 - **SQL**: Database querying, analytics, and performance optimization
-- **Data Modeling**: Database design patterns and architectural principles  
+- **Data Modeling**: Database design patterns and architectural principles
 - **System Design**: Scalable system architecture and design patterns
 
 Each area includes progressive learning paths from fundamentals to advanced techniques, with practical exercises and real-world case studies.
 
-### [Interviews](./interviews/)
+### [Interviews](./docs/interviews/)
+
 The interviews directory contains company-specific interview problems and case studies, featuring challenges from organizations such as Netflix, Anthropic, and others. These materials provide targeted preparation for industry-specific technical interviews.
 
 ---
