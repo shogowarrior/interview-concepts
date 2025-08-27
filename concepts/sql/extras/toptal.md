@@ -450,19 +450,19 @@ This directory contains SQL interview questions and coding challenges adapted fr
 
 ### Interview Question Categories
 
-#### [data-analysis/](data-analysis/) - *In Development*
+#### [data-analysis](data-analysis/) - *In Development*
 - Business metrics and KPI calculations
 - Customer segmentation and analytics
 - Revenue and performance analysis
 - A/B testing data analysis
 
-#### [ranking-problems/](ranking-problems/) - *In Development*
+#### [ranking-problems](ranking-problems/) - *In Development*
 - Top-N queries and ranking patterns
 - Percentile calculations and distributions
 - Running totals and moving averages
 - Competitive analysis queries
 
-#### [complex-joins/](complex-joins/) - *In Development*
+#### [complex-joins](complex-joins/) - *In Development*
 - Multi-level hierarchical data
 - Complex relationship traversals
 - Data warehousing patterns

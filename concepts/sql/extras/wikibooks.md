@@ -443,19 +443,19 @@ This directory contains SQL exercises and examples adapted from [Wikibooks SQL t
 
 ### Exercise Categories
 
-#### [basic-sql/](basic-sql/) - *In Development*
+#### [basic-sql](basic-sql/) - *In Development*
 - SELECT statements and basic queries
 - Simple WHERE clauses and filtering
 - Basic aggregation functions
 - Simple JOIN operations
 
-#### [intermediate-joins/](intermediate-joins/) - *In Development*
+#### [intermediate-joins](intermediate-joins/) - *In Development*
 - Multi-table JOIN patterns
 - Complex WHERE conditions
 - Subqueries introduction
 - Data relationship exercises
 
-#### [advanced-patterns/](advanced-patterns/) - *In Development*
+#### [advanced-patterns](advanced-patterns/) - *In Development*
 - Window functions practice
 - Common Table Expressions (CTEs)
 - Recursive queries
